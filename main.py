@@ -7,12 +7,16 @@ import requests
 app = FastAPI()
 rag = RAGPipeline()
 
-ollama_endpoint = "http://localhost:11434/api/generate"
+llama_endpoint = "http://localhost:8080/v1/chat/completions"
 
-class Request(BaseModel):
-    model: str
+class ChatRequest(BaseModel):
     prompt: str
-    stream: bool
+    max_tokens: int
+    temperature: float
+
+class RAGRequest(ChatRequest):
+    k: int
+    n: int
 
 @app.post("/upload")
 async def upload_pdf(files: List[UploadFile] = File(...)):
@@ -31,30 +35,50 @@ async def upload_pdf(files: List[UploadFile] = File(...)):
     print("Files uploaded successfully...")
     return {"message": f"{len(files)} PDFs uploaded and processed."}
 
+@app.post("/chat")
+def chat(req: ChatRequest):
+    print("Sending prompt directly to Llama server...")
+    r = requests.post(
+            llama_endpoint,
+            json={
+                "messages": [
+                    {"role": "system", "content": "You are a helpful assistant."},
+                    {"role": "user", "content": req.prompt},
+            ],
+            "max_tokens": req.max_tokens,
+            "temperature": req.temperature,
+        },
+    )
+    print("Answer received...")
+    return r.json()
+
 @app.post("/")
-def generate(req: Request):
+def generate(req: RAGRequest):
     print("Retrieving similar text...")
-    retrieved_text = rag.retrieve(req.prompt)
+    retrieved_text = rag.retrieve(req.prompt, req.k, req.n)
     print(retrieved_text)
     
-    rag_prompt = f"""
-    Use the retrieved context as your main source. Rephrase in your own words and combine relevant parts.
-    If the context is incomplete, you may add general knowledge for obvious facts.
-    If the answer isn't covered at all, say so.
-
+    system_prompt = """
+        You are a helpful assistant. Use the retrieved context as your main source. Rephrase in your own words and combine relevant parts. If the context is incomplete, you may add general knowledge for obvious facts. If the answer isn't covered at all, say so.
+    """
+    
+    user_prompt = f"""
     Retrieved Context: {retrieved_text}
 
     Question: {req.prompt}
 
     Answer:
     """
-    print("Sending prompt to Ollama server...")
+    print("Sending prompt to Llama server...")
     r = requests.post(
-            ollama_endpoint,
+            llama_endpoint,
             json={
-                "model": req.model,
-                "prompt": rag_prompt,
-                "stream": False
+                "messages": [
+                    {"role": "system", "content": system_prompt},
+                    {"role": "user", "content": user_prompt}
+                ],
+                "max_tokens": req.max_tokens,
+                "temperature": req.temperature,
             }
     ) 
     print("Answer received...")

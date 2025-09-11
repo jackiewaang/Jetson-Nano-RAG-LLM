@@ -1,6 +1,6 @@
 from langchain_community.document_loaders import PyPDFLoader
 from langchain.text_splitter import RecursiveCharacterTextSplitter
-from sentence_transformers import SentenceTransformer
+from sentence_transformers import SentenceTransformer, CrossEncoder
 import chromadb
 from chromadb.utils import embedding_functions
 import re
@@ -8,9 +8,11 @@ import re
 class RAGPipeline:
     def __init__(self):
         # Load Embedding Function Model
+        
         self.embedding = embedding_functions.SentenceTransformerEmbeddingFunction(
                 model_name="sentence-transformers/all-MiniLM-L6-v2"
         )
+        self.model = CrossEncoder('cross-encoder/ms-marco-MiniLM-L6-v2')
         # Initialize ChromaDB with embedding function
         self.chroma_client = chromadb.Client()
         self.collection = self.chroma_client.get_or_create_collection(
@@ -51,11 +53,23 @@ class RAGPipeline:
                 documents=documents,
                 ids=ids
         )
+    
+    def rerank(self, query, docs):
+        pairs = [(query, doc) for doc in docs]
+        scores = self.model.predict(pairs)
+        ranked_docs = [doc for _, doc in sorted(zip(scores, docs), key=lambda x:x[0], reverse=True)]
+        return ranked_docs
 
     # Retrieve similar text from vector DB
-    def retrieve(self, prompt):
+    def retrieve(self, prompt, k, n):
         search_result = self.collection.query(
                 query_texts=[prompt],
-                n_results=3
+                n_results=k
         )
-        return "\n\n".join(search_result["documents"][0])
+        candidate_docs = search_result["documents"][0]
+
+        reranked_docs = self.rerank(prompt, candidate_docs)
+
+        top_n_docs = reranked_docs[:n]
+
+        return "\n\n".join(top_n_docs)
