@@ -55,9 +55,13 @@ def chat(req: ChatRequest):
 @app.post("/")
 def generate(req: RAGRequest):
     print("Retrieving similar text...")
-    retrieved_text = rag.retrieve(req.prompt, req.k, req.n)
-    print(retrieved_text)
-    
+    retrieved_result = rag.retrieve(req.prompt, req.k, req.n)
+    retrieved_text = retrieved_result["content"]
+    sources_used = retrieved_result["sources"]
+
+    print("Retrieved text:", retrieved_text)
+    print("Sources used:", sources_used)
+
     system_prompt = """
         You are a helpful assistant. Use the retrieved context as your main source. Rephrase in your own words and combine relevant parts. If the context is incomplete, you may add general knowledge for obvious facts. If the answer isn't covered at all, say so.
     """
@@ -82,5 +86,15 @@ def generate(req: RAGRequest):
             }
     ) 
     print("Answer received...")
-    print(r.json())
-    return r.json()
+    
+    response_data = r.json()
+
+    source_files = list(set([source["source"] for source in sources_used]))
+
+    response_data["sources_used"] = {
+            "files": source_files,
+            "detailed_sources": sources_used
+    }
+
+    print("Response with sources", response_data)
+    return response_data

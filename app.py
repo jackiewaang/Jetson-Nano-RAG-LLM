@@ -85,6 +85,10 @@ with st.form("chat_form", clear_on_submit=True):
         if choices:
             message = choices[0].get("message", {})
             answer = message.get("content", "")
+        
+        sources_used = data.get("sources_used", {})
+        source_files = sources_used.get("files", [])
+        detailed_sources = sources_used.get("detailed_sources", [])
 
         timings = data.get("timings", {})
         inference_time = (timings.get("prompt_ms", 0) + timings.get("predicted_ms", 0)) / 1000
@@ -102,6 +106,8 @@ with st.form("chat_form", clear_on_submit=True):
         st.session_state.messages.append({
             "user": prompt,
             "LLM": answer,
+            "sources_referenced": source_files,
+            "detailed_sources": detailed_sources,
             "time": inference_time,
             "throughput": throughput,
             "ctx_len": ctx_len,
@@ -111,9 +117,23 @@ with st.form("chat_form", clear_on_submit=True):
 for chat in reversed(st.session_state.messages):
     st.markdown(f"User: {chat['user']}")
     st.markdown(f"AI: {chat['LLM']}")
+    if chat.get('sources_referenced') and len(chat['sources_referenced']) > 0:
+        st.markdown("**Sources Used:**")
+        for source in chat['sources_referenced']:
+            # Extract just the filename for cleaner display
+            filename = source.split('/')[-1] if '/' in source else source
+            st.markdown(f"• {filename}")
+        
+        # Only show expander if there are detailed sources
+        if chat.get('detailed_sources'):
+            with st.expander("Detailed Source Information"):
+                # Display each source with its page number (no grouping to show all pages)
+                for source in chat['detailed_sources']:
+                    filename = source['source'].split('/')[-1] if '/' in source['source'] else source['source']
+                    page = source.get('page', 'N/A')
+                    st.markdown(f"• **{filename}**: Page {page}")
     st.markdown(f"Inference time: {chat['time']:.2f} seconds")
     st.markdown(f"Throughput: {chat['throughput']:.2f} tokens/second")
     st.markdown(f"Context Length: {chat['ctx_len']} tokens")
     st.markdown(f"Memory Usage: {chat['memory'] / (1024**3):.2f}GB")
     st.markdown("---")
-
