@@ -7,11 +7,27 @@ import re
 
 class RAGPipeline:
     def __init__(self, chroma_db_path="./chroma_db"):
-        # Initialize embedding function and cross-encoder model
-        self.embedding = embedding_functions.SentenceTransformerEmbeddingFunction(
-            model_name="sentence-transformers/all-MiniLM-L6-v2"
-        )
-        self.model = CrossEncoder("cross-encoder/ms-marco-MiniLM-L6-v2")
+        # Embedding function
+        try:
+            self.embedding = embedding_functions.SentenceTransformerEmbeddingFunction(
+                model_name="./models/all-MiniLM-L6-v2"
+            )
+            print("Loaded local embedding model.")
+        except Exception as e:
+            print(f"Failed to load local embedding model: {e}")
+            print("Falling back to online model...")
+            self.embedding = embedding_functions.SentenceTransformerEmbeddingFunction(
+                model_name="sentence-transformers/all-MiniLM-L6-v2"
+            )
+
+        # CrossEncoder model
+        try:
+            self.model = CrossEncoder("./models/ms-marco-MiniLM-L6-v2")
+            print("Loaded local cross-encoder model.")
+        except Exception as e:
+            print(f"Failed to load local cross-encoder model: {e}")
+            print("Falling back to online model...")
+            self.model = CrossEncoder("cross-encoder/ms-marco-MiniLM-L6-v2")
 
         # Initialize ChromaDB client and collection for vector database
         self.chroma_client = chromadb.Client()
