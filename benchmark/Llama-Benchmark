@@ -1,0 +1,786 @@
+What is the difference between LAN, WAN, and PAN?
+
+User: What is the difference between LAN, WAN, and PAN?
+
+AI: The main difference between LAN, WAN, and PAN is in their geographical reach and the types of technologies they typically use. LANs are limited to a small geographical area, typically within a home, office building, or a closely positioned group of buildings. LANs are made with USB and FireWire connections and typically use Bluetooth and infrared communication. PANs extend to 10 meters, which is typically made with USB and FireWire connections. LANs are often based on Ethernet technology, while WANs use a communications channel that combines many types of media such as telephone lines, cables, and airwaves. LANs can be connected to a WAN using a router, but WANs are made with Ethernet technology. LANs have higher data transfer rates, limited geographic range, and lack of reliance on transmission facilities.
+
+Sources Used:
+
+• Computer_network_NEW.pdf
+
+Detailed Source Information
+
+Inference time: 22.24 seconds
+
+Throughput: 8.69 tokens/second
+
+Context Length: 397 tokens
+
+Memory Usage: 0.41GB
+
+User: What is the difference between LAN, WAN, and PAN?
+
+AI: The primary distinction between LAN, WAN, and PAN is their varying degrees of connectivity. LANs are localized networks that connect devices in a confined area, typically a home, school, office building, or group of buildings. They use traditional wired connections and typically rely on Ethernet technology. WANs, on the other hand, are large-scale networks that span multiple geographic locations. They use a combination of various media channels, including telephone lines, cables, and airwaves, and often rely on transmission facilities provided by common carriers, such as telephone companies. PANs, on the other hand, are local area networks that connect devices within a limited geographical area, such as a home, school, office building, or closely positioned group of buildings. They use standard communication channels and typically rely on wireless technologies such as Bluetooth and infrared communication.
+
+Sources Used:
+
+• Computer_network_NEW.pdf
+
+Detailed Source Information
+
+Inference time: 19.45 seconds
+
+Throughput: 8.67 tokens/second
+
+Context Length: 397 tokens
+
+Memory Usage: 0.41GB
+
+User: What is the difference between LAN, WAN, and PAN?
+
+AI: The key difference between LAN (Local Area Network), WAN (Wide Area Network), and PAN (Pan) devices lies in their coverage and communication methods. LANs are limited in size and geographical coverage, typically connecting devices within a small area such as a home, school, office building, or closely spaced locations. LANs use wired connections and are designed for small-scale networking. WANs, on the other hand, are larger in size and cover more extensive geographical areas, typically spanning city, country, or even intercontinental distances. WANs use a communications channel that combines multiple types of media, such as telephone lines, cables, and airwaves. WANs often rely on transmission facilities provided by common carriers, such as telephone companies. LANs can connect to a WAN using a router, whereas WANs connect to a LAN using a router. LANs are generally based on Ethernet technology, while WANs are more commonly based on ITU-T G.hn, which provides a way to create a LAN using existing wiring, such as coaxial cables, telephone lines, and power lines.
+
+Sources Used:
+
+• Computer_network_NEW.pdf
+
+Detailed Source Information
+
+Inference time: 25.54 seconds
+
+Throughput: 8.65 tokens/second
+
+Context Length: 397 tokens
+
+Memory Usage: 0.41GB
+
+------------------------------------------------------------------------------
+
+Explain the OSI model and its layers.
+
+User: Explain the OSI model and its layers.
+
+AI: In the OSI model, the software to handle the media is defined at layers 1 and 2, which are the physical layer and the data link layer, respectively. The physical layer deals with the physical characteristics of the media, such as voltage and resistance. The data link layer deals with the transmission of data over a medium, such as a wire or fiber optic cable. The OSI model also includes layers 3 and 4, which handle the network layer and the transport layer, respectively. The network layer is responsible for routing packets between devices on the network. The transport layer is responsible for the communication between devices on the same network. The protocol stack, also known as the network layer, is the collection of protocols that enable communication between networked devices. The protocols include TCP (Transmission Control Protocol) and IP (Internet Protocol), which handle the physical and data link layer functions, respectively.
+
+Sources Used:
+
+• Computer_network_NEW.pdf
+
+Detailed Source Information
+
+Inference time: 20.81 seconds
+
+Throughput: 8.73 tokens/second
+
+Context Length: 372 tokens
+
+Memory Usage: 0.42GB
+
+User: Explain the OSI model and its layers.
+
+AI: Certainly!
+
+The OSI (Open Systems Interconnection) model is a standard model for communication protocols and is widely used in computer networking and telecommunications. It is based on the principles of the International Organization for Standardization (ISO) and provides a structured framework for designing, implementing, and managing computer networks.
+
+The OSI model consists of seven layers, each designed to handle specific functions and data types. The layers are numbered 1 through 7, with the lowest layer (Layer 1) being the physical layer, followed by Layer 2, Layer 3, Layer 4, Layer 5, and Layer 6. Each layer is responsible for providing a specific function and handling data types at a specific level of complexity.
+
+The physical layer is the lowest layer, which deals with the physical connections between devices and the physical characteristics of the network, such as wires and media. The data link layer is above the physical layer and deals with data transmissions between devices on the same network. The network layer is above the data link layer and deals with data transmissions between different networks.
+
+The protocol layer is the middle layer, which deals with the communication functions between networked devices. These functions include data encoding, decoding, error correction, and flow control. The session layer is above the protocol layer and deals with the communication functions between networked devices in a session. The presentation layer is above the session layer and deals with data encoding and decoding at a higher level. The application layer is above the presentation layer and deals with data encoding, decoding, and presentation at a higher level.
+
+The network layer is the highest layer, which deals with the entire network and its data flows. The session layer is above the network layer and deals with the data flows between networked devices. The presentation layer is above the session layer and deals with the data flows between networked devices in a session. The application layer is above the presentation layer and deals with the data flows between networked devices in a session. The transport layer is above the application layer and deals with the data flows between networked devices in a session. The network layer is above the transport layer and deals with the data flows between networked devices in a session. The session layer is above the network layer and deals with the data flows between networked devices in a session. The presentation layer is above the session layer and deals with the data flows between networked devices in a session. The application layer is above the presentation layer and deals with the data flows between networked devices in a session.
+
+The protocol stack is the stack of protocols that form the network layer. It is the network layer's layer, which includes all the protocols that are used to exchange data between networked devices. The stack includes layers such as TCP, IP, HTTP, and FTP. The layers of the protocol stack are numbered 1 through 7, with Layer 1 being the physical layer, Layer 2 being the data link layer, Layer 3 being the network layer, Layer 4 being the transport layer, Layer 5 being the session layer, Layer 6 being the presentation layer, and Layer 7 being the application layer.
+
+In a protocol stack, protocols are divided up into layers, where each layer leverages the services of the layer below it until the lowest layer controls the hardware that sends information across the media. The use of protocol layering is ubiquitous across the field of computer networking, where protocols are used to exchange data between networked devices. The protocol stack provides a standardized framework for designing, implementing, and managing computer networks and communication protocols.
+
+Sources Used:
+
+• Computer_network_NEW.pdf
+
+Detailed Source Information
+
+Inference time: 88.07 seconds
+
+Throughput: 8.16 tokens/second
+
+Context Length: 372 tokens
+
+Memory Usage: 0.42GB
+
+User: Explain the OSI model and its layers.
+
+AI: The OSI model (Open Systems Interconnection model) is a system of reference models used to define and establish the structure of computer network communications. It was developed by the International Organization for Standardization (ISO) in 1977 and is widely used in the field of computer networking. The model consists of seven layers, each responsible for a specific function in the communication process. These layers are as follows:
+
+Physical layer: This layer deals with the transmission of information over physical media such as wires or cables. It includes the physical characteristics of the media and the protocols used to control the transmission of data.
+
+Data Link layer: This layer is responsible for the transfer of data over the data link layer. It includes the control of the data link layer and the establishment of the physical link between devices.
+
+Transport layer: This layer is responsible for the transfer of data over the transport layer, which includes the establishment of the physical link and the control of data flow over the network.
+
+Session layer: This layer is responsible for the establishment and maintenance of connections between devices. It includes the establishment of connections, the handling of session requests, and the management of data traffic.
+
+Presentation layer: This layer is responsible for the presentation of data, including the encoding of data using standard protocols and the transmission of data using the appropriate media.
+
+Application layer: This layer is responsible for the application of data, including the application of data to the application layer, the processing of data using standard applications, and the display of data using standard outputs.
+
+Transport layer: This layer is responsible for the transfer of data over the transport layer, which includes the establishment of the physical link and the control of data flow over the network.
+
+Sources Used:
+
+• Computer_network_NEW.pdf
+
+Detailed Source Information
+
+Inference time: 42.98 seconds
+
+Throughput: 8.58 tokens/second
+
+Context Length: 372 tokens
+
+Memory Usage: 0.42GB
+
+------------------------------------------------------------------------------
+
+What is the difference between wired and wireless connectivity?
+
+User: What is the difference between wired and wireless connectivity?
+
+AI: The context mentions two types of connectivity: wired and wireless. It describes how a PAN can reach up to 10 meters and how wired connections are typically created with USB and FireWire. It also introduces the concept of a local area network (LAN), which is a network that connects devices in a limited geographical area, like a home, school, or office building. It then discusses the use of LANs for Ethernet, which is a technology that connects computers and devices in a limited geographical area, such as a home, school, or office building. Finally, it describes the differences between wired and wireless technologies, noting that wired technologies like Ethernet are based on Ethernet, while wireless technologies like Wi-Fi use radio waves and infrared signals as transmission media.
+
+Sources Used:
+
+• Computer_network_NEW.pdf
+
+Detailed Source Information
+
+Inference time: 17.55 seconds
+
+Throughput: 8.71 tokens/second
+
+Context Length: 395 tokens
+
+Memory Usage: 0.42GB
+
+User: What is the difference between wired and wireless connectivity?
+
+AI: Wired connectivity refers to the use of wired devices, such as USB and FireWire, to connect computers and devices in a limited geographical area like a home or office building. On the other hand, wireless connectivity uses radio waves to connect devices over a limited geographical area like a building.
+
+Sources Used:
+
+• Computer_network_NEW.pdf
+
+Detailed Source Information
+
+Inference time: 6.87 seconds
+
+Throughput: 8.80 tokens/second
+
+Context Length: 395 tokens
+
+Memory Usage: 0.42GB
+
+User: What is the difference between wired and wireless connectivity?
+
+AI: Wired and wireless connectivity are different types of networking technologies used in computer networks. Wired devices, such as USB, FireWire connections, and Bluetooth, connect to a central hub or server via cables. These devices transmit data using standard protocols like Ethernet. In contrast, wireless devices, like Wi-Fi, use radio waves to communicate over long distances, typically within 10 meters. Wireless devices use technologies like infrared, Bluetooth, and infrared communication to transfer data over a wireless network.
+
+Sources Used:
+
+• Computer_network_NEW.pdf
+
+Detailed Source Information
+
+Inference time: 13.06 seconds
+
+Throughput: 8.73 tokens/second
+
+Context Length: 395 tokens
+
+Memory Usage: 0.42GB
+
+
+
+-----------------------------------------------------------------------------
+
+What is TCP/IP and why is it important?
+
+User: What is TCP/IP and why is it important?
+
+AI: TCP/IP is the foundation of all modern networking. It offers connectionless and connection-oriented services over an internet. The Internet protocol suite, also called TCP/IP, is the defining set of protocols for the Internet. TCP/IP is the protocol suite, also called TCP/IP, that provides connectionless and connection-oriented services over the internet. It is important because it supports the Internet's infrastructure, enabling communication between devices and networks. This protocol suite is crucial for the functioning of the internet, which is essential for the global exchange of information and data.
+
+Sources Used:
+
+• Computer_network_NEW.pdf
+
+Detailed Source Information
+
+Inference time: 12.69 seconds
+
+Throughput: 8.74 tokens/second
+
+Context Length: 400 tokens
+
+Memory Usage: 0.42GB
+
+User: What is TCP/IP and why is it important?
+
+AI: TCP/IP is the foundation of modern networking, providing connectionless and connection-oriented services over an Internet. It's important because it enables the creation of a network infrastructure that allows multiple devices to communicate with each other over a shared medium, such as the Internet. Without TCP/IP, it would be impossible for devices to connect and exchange data with each other, as they wouldn't know what the other is up to. This makes TCP/IP essential for the functioning of the Internet and the ability for individuals to access and share information over the global network.
+
+Sources Used:
+
+• Computer_network_NEW.pdf
+
+Detailed Source Information
+
+Inference time: 12.81 seconds
+
+Throughput: 8.69 tokens/second
+
+Context Length: 400 tokens
+
+Memory Usage: 0.42GB
+
+User: What is TCP/IP and why is it important?
+
+AI: TCP/IP is the foundation of the Internet, providing connectionless and connection-oriented services over an unreliable and connectionless medium. It is used between the wireless router and the home user's personal computer when the user is surfing the web. TCP/IP is important because it defines the protocols for the Internet and is the defining set of protocols for the Internet, offering connectionless and connection-oriented services.
+
+Sources Used:
+
+• Computer_network_NEW.pdf
+
+Detailed Source Information
+
+Inference time: 10.93 seconds
+
+Throughput: 8.76 tokens/second
+
+Context Length: 400 tokens
+
+Memory Usage: 0.42GB
+
+----------------------------------------------------------------------------
+
+List the main components of a computer and their functions.
+
+User: List the main components of a computer and their functions.
+
+AI: The main components of a computer and their functions are:
+
+Central Processing Unit (CPU)
+
+It performs arithmetic and logic operations.
+It manages the fetching, decoding, and execution of instructions from memory.
+Random-Access Memory (RAM)
+
+It holds data and instructions temporarily.
+It allows the CPU to access data and instructions quickly.
+Motherboard
+
+It connects all other components of the computer.
+It includes the computer data storage, graphics card, sound card, and case.
+Integrated Circuit (IC) chips
+
+They contain billions of tiny metal oxides-semiconductor field-effect transistors (MOSFETs).
+They connect the CPU, RAM, and other components.
+External Devices
+
+Monitor, mouse, keyboard, and speakers.
+They are connected via ports or expansion slots.
+The CPU manages the fetching, decoding, and execution of instructions from memory, while the other components are responsible for the other parts of the computer, including the computer data storage, graphics card, sound card, and case. The integrated circuit (IC) chips in the computer connect the CPU, RAM, and other components, and they are made up of billions of tiny metal oxides-semiconductor field-effect transistors (MOSFETs).
+
+Sources Used:
+
+• Central_processing_unit_NEW.pdf
+
+• Computer_hardware_NEW.pdf
+
+Detailed Source Information
+
+Inference time: 32.07 seconds
+
+Throughput: 8.57 tokens/second
+
+Context Length: 401 tokens
+
+Memory Usage: 0.43GB
+
+User: List the main components of a computer and their functions.
+
+AI: Main components of a computer include:
+
+Central Processing Unit (CPU): This is the brain of the computer, responsible for performing arithmetic and logic operations.
+
+Random Access Memory (RAM): This is the temporary storage device where the CPU can fetch data and instructions from.
+
+Motherboard: This is the physical interface that connects all the other components of the computer.
+
+Computer data storage: This includes storage devices such as hard disks and floppy disks, as well as other types of storage.
+
+Graphics card: This is a device that displays images and graphics on the screen.
+
+Sound card: This is a device that converts sound signals into digital data and then stores it.
+
+Computer case: This includes the exterior parts of the computer, such as the monitor, keyboard, mouse, and speakers.
+
+The functions of these components include:
+
+The CPU processes data and instructions from RAM, which is then passed to other components.
+
+The RAM temporarily holds data and instructions, which are then transferred to the CPU for processing.
+
+The motherboard is the physical connection between the CPU, RAM, and other components.
+
+The data storage devices store data and instructions used by the CPU.
+
+The graphics card and sound card convert sound signals into digital data, which is then stored.
+
+The case is the exterior parts of the computer, including the monitor, keyboard, mouse, and speakers.
+
+In summary, the main components of a computer include the CPU, RAM, motherboard, data storage, graphics card, and sound card, and their primary functions are processing data and instructions from RAM, transferring them to the CPU for processing, storing data and instructions, converting sound signals into digital data, and storing the final output.
+
+Sources Used:
+
+• Central_processing_unit_NEW.pdf
+
+• Computer_hardware_NEW.pdf
+
+Detailed Source Information
+
+Inference time: 41.25 seconds
+
+Throughput: 8.49 tokens/second
+
+Context Length: 401 tokens
+
+Memory Usage: 0.42GB
+
+User: List the main components of a computer and their functions.
+
+AI: The main components of a computer and their functions are:
+
+Central Processing Unit (CPU) - The primary brain of the computer, responsible for executing instructions and performing arithmetic and logical operations.
+
+Random-access Memory (RAM) - Stores data that is temporarily needed while the CPU is running.
+
+Motherboard - Connects all the components together and provides a physical interface between the CPU and other components.
+
+Graphics Card - Processes and displays graphics and images.
+
+Sound Card - Receives and processes sound, which is then played back.
+
+Computer Data Storage - Stores data, including programs, data, and data from other devices.
+
+External Devices - Connects to other devices, such as monitors, mice, keyboards, and speakers.
+
+Motherboard - Connects all the components together and provides a physical interface between the CPU and other components.
+
+Integrated Circuit (IC) chips - Store millions of tiny metal oxidesemiconductor field-effect transistors.
+
+External Devices - Connects to other devices, such as monitors, mice, keyboards, and speakers.
+
+These components are connected to form the computer's hardware, which includes the CPU, RAM, motherboard, graphics card, sound card, and computer data storage. The computer's software is derived from the instructions contained in the CPU and RAM, and is used to perform various tasks.
+
+Sources Used:
+
+• Central_processing_unit_NEW.pdf
+
+• Computer_hardware_NEW.pdf
+
+Detailed Source Information
+
+Inference time: 34.89 seconds
+
+Throughput: 8.59 tokens/second
+
+Context Length: 401 tokens
+
+Memory Usage: 0.42GB
+
+-----------------------------------------------------------------------------
+
+What is the difference between KB, MB, GB and TB?
+
+User: What is the difference between KB, MB, GB and TB?
+
+AI: The question is asking for the difference between kilobytes (KB), megabytes (MB), gigabytes (GB), and terabytes (TB). The answer provided in the context does not compare these units directly. Instead, it lists the standard units mentioned by the JEDEC (Joint Electron Device Association) standards and then provides a conversion between these units using binary prefixes. The context mentions that the customary convention is used in the Microsoft Windows operating system and random-access memory, while the binary convention is used for software reports. The provided information about the prefixes and their meanings is not relevant to the question being asked.
+
+Sources Used:
+
+• hdd.pdf
+
+• Byte_NEW.pdf
+
+Detailed Source Information
+
+Inference time: 15.18 seconds
+
+Throughput: 8.25 tokens/second
+
+Context Length: 630 tokens
+
+Memory Usage: 0.43GB
+
+User: What is the difference between KB, MB, GB and TB?
+
+AI: In the same units (referred to here as the customary convention), 1 kilobyte (KB) is equal to 1,024 bytes, 1 megabyte (MB) is equal to 1,0242 bytes, and 1 gigabyte (GB) is equal to 1,0243 bytes are mentioned by a 1990s JEDEC standard. However, only the first three multiples (up to GB) are mentioned by the JEDEC standard, making no mention of TB and larger. While confusing and incorrect, the customary convention is used by the Microsoft Windows operating system and random-access memory. Software reports hard disk drive or memory capacity in different forms using either decimal or binary prefixes. The Microsoft Windows family of operating systems uses the binary convention when reporting storage capacity, so 1 GB is equal to 1,000,000,000,000 bytes. The binary interpretation of the prefixes is used for hard disk drive or memory capacity reporting, while decimal interpretations are used for decimal prefixes.
+
+Sources Used:
+
+• hdd.pdf
+
+• Byte_NEW.pdf
+
+Detailed Source Information
+
+Inference time: 27.72 seconds
+
+Throughput: 8.11 tokens/second
+
+Context Length: 630 tokens
+
+Memory Usage: 0.43GB
+
+User: What is the difference between KB, MB, GB and TB?
+
+AI: In the same units (referred to as the customary convention), 1 kilobyte (KB) is equal to 1,024 bytes, 1 megabyte (MB) is equal to 1,0242 bytes, and 1 gigabyte (GB) is equal to 1,0243 bytes. The customary convention is used by the Microsoft Windows operating system and random-access memory. However, capacities of memory are usually quoted using a binary interpretation of the prefixes, i.e., using powers of 1024 instead of 1000. Software reports hard disk drive or memory capacity in different forms using either decimal or binary prefixes. The Microsoft Windows family of operating systems uses the binary convention when reporting storage capacity, so 1 TB = 1,000,000,000,000 bytes.
+
+Sources Used:
+
+• hdd.pdf
+
+• Byte_NEW.pdf
+
+Detailed Source Information
+
+Inference time: 25.95 seconds
+
+Throughput: 8.18 tokens/second
+
+Context Length: 630 tokens
+
+Memory Usage: 0.43GB
+
+
+
+----------------------------------------------------------------------------
+
+Compare SSD and HDD in terms of speed and storage method
+
+User: Compare SSD and HDD in terms of speed and storage method
+
+AI: In terms of speed, SSDs offer superior performance to HDDs. They can achieve higher data transfer rates and areal storage density, making them faster and more efficient. However, HDDs offer higher rotational latency and seek times, which can degrade performance over time. On the other hand, SSDs have significantly higher capacity for their price, making them more suitable for applications requiring large amounts of storage space. In traditional HDDs, a rewritten file will often occupy the same location on the disk surface as the original file, while in SSDs, a new copy will often be written to different NAND cells for wear leveling. The wear-leveling algorithms are complex and difficult to test. Higher data transfer rates and higher areal storage density are notable advantages of SSDs, but they also come with higher latency and access times. In 2018, SSDs outperformed HDDs in the market. Despite the higher cost per bit, they are replacing HDDs in applications where speed, power consumption, small size, and high capacity are important factors.
+
+Sources Used:
+
+• hdd.pdf
+
+• Solid-state_drive_NEW.pdf
+
+Detailed Source Information
+
+Inference time: 25.04 seconds
+
+Throughput: 8.59 tokens/second
+
+Context Length: 436 tokens
+
+Memory Usage: 0.43GB
+
+User: Compare SSD and HDD in terms of speed and storage method
+
+AI: In terms of speed, SSDs significantly outperform HDDs, offering higher data transfer rates and greater areal storage density. They also have higher reliability, much lower latency and access times, and faster write speeds compared to HDDs. In contrast, HDDs, which use traditional spinning disks, have lower capacity, higher rotational latency, and higher seek time, making them unsuitable for high-speed applications. In comparison, SSDs have an advantage in terms of data transfer speed and larger capacity, providing higher performance and faster data transfer rates compared to HDDs.
+
+Sources Used:
+
+• hdd.pdf
+
+• Solid-state_drive_NEW.pdf
+
+Detailed Source Information
+
+Inference time: 13.31 seconds
+
+Throughput: 8.69 tokens/second
+
+Context Length: 436 tokens
+
+Memory Usage: 0.43GB
+
+User: Compare SSD and HDD in terms of speed and storage method
+
+AI: To compare SSD and HDD, it's important to understand their specific features:
+
+Speed:
+
+HDDs are renowned for their high performance, especially in data-intensive tasks.
+SSDs offer significantly higher storage capacity for their price, making them ideal for applications requiring large amounts of data storage, such as cloud computing, backup, and gaming.
+Storage Method:
+
+HDDs rely on mechanical rotation to read and write data, which can be slow for large datasets.
+SSDs use electronic means to read and write data, providing faster speeds but requiring more space and more frequent rewrites to maintain data integrity.
+In summary, HDDs excel in handling large, high-speed data storage, while SSDs outperform HDDs in smaller, lower-speed scenarios. However, SSDs do offer significant advantages in terms of reliability, speed, and capacity, making them an increasingly popular choice in today's data-intensive computing environments.
+
+Sources Used:
+
+• hdd.pdf
+
+• Solid-state_drive_NEW.pdf
+
+Detailed Source Information
+
+Inference time: 24.21 seconds
+
+Throughput: 8.64 tokens/second
+
+Context Length: 436 tokens
+
+Memory Usage: 0.43GB
+
+
+
+----------------------------------------------------------------------------
+
+What is volatile vs non-volatile memory?
+
+User: What is volatile vs non-volatile memory?
+
+AI: Volatility refers to memory that experiences wear when written, but can recover from this wear. On the other hand, non-volatile memory, such as flash memory and ROM, is designed to retain data even after power is removed. This makes it more durable than volatile memories but allows data to be written and then erased without loss of information. Volatile memory types, like DRAM and SRAM, are primarily used for primary storage, while non-volatile memory types, like NAND flash, are primarily used for CPU cache. Most semiconductor memory is organized into memory cells, each storing one bit (0 or 1), and flash memory is an example of a non-volatile memory type.
+
+Sources Used:
+
+• Computer_memory_NEW.pdf
+
+Detailed Source Information
+
+Inference time: 16.23 seconds
+
+Throughput: 8.70 tokens/second
+
+Context Length: 396 tokens
+
+Memory Usage: 0.43GB
+
+User: What is volatile vs non-volatile memory?
+
+AI: Volatiles and non-volatiles are two primary categories of memory, each with distinct characteristics. Volatile memory, such as volatile memory (e.g., DRAM, SRAM, EEPROM) and ROM, has a limited non-volatile duration after power is removed. This means that data written to these memories will eventually be lost when power is removed. On the other hand, non-volatile memory, including flash memory and ROM, retains data even after power is removed, allowing it to be preserved from power-off to the next power-on. The main difference between these two types is their ability to retain data even after power is removed, while volatile memory loses data after power is removed.
+
+Sources Used:
+
+• Computer_memory_NEW.pdf
+
+Detailed Source Information
+
+Inference time: 16.53 seconds
+
+Throughput: 8.68 tokens/second
+
+Context Length: 396 tokens
+
+Memory Usage: 0.43GB
+
+User: What is volatile vs non-volatile memory?
+
+AI: Volatility refers to the property of a memory where it has some limited non-volatile duration after power is removed, but data is ultimately lost. A typical goal when using volatile memory is to provide the high performance and durability associated with volatile memories while providing some benefits of non-volatile memory. Non-volatile memory, on the other hand, has a limited non-volatile duration after power is removed, but data is not lost. A typical goal when using non-volatile memory is to provide the high performance and durability associated with non-volatile memories.
+
+Sources Used:
+
+• Computer_memory_NEW.pdf
+
+Detailed Source Information
+
+Inference time: 14.82 seconds
+
+Throughput: 8.73 tokens/second
+
+Context Length: 396 tokens
+
+Memory Usage: 0.43GB
+
+--------------------------------------------------------------------------
+
+What is the fetch-execute cycle?
+
+User: What is the fetch-execute cycle?
+
+AI: The fetch-execute cycle is the sequence of steps executed by most CPUs to execute a program. This cycle involves fetching the next instruction from memory, decoding the instruction, and executing it. After executing an instruction, the entire process repeats until the next instruction is fetched.
+
+Sources Used:
+
+• Central_processing_unit_NEW.pdf
+
+Detailed Source Information
+
+Inference time: 6.23 seconds
+
+Throughput: 8.95 tokens/second
+
+Context Length: 361 tokens
+
+Memory Usage: 0.43GB
+
+User: What is the fetch-execute cycle?
+
+AI: The fetch-execute cycle is the sequence of steps that a CPU follows to execute a sequence of stored instructions. This cycle is crucial because it allows the CPU to efficiently execute a program and transfer the results back to memory.
+
+Sources Used:
+
+• Central_processing_unit_NEW.pdf
+
+Detailed Source Information
+
+Inference time: 5.22 seconds
+
+Throughput: 8.98 tokens/second
+
+Context Length: 361 tokens
+
+Memory Usage: 0.43GB
+
+User: What is the fetch-execute cycle?
+
+AI: The fetch-execute cycle is a crucial component of most CPUs. This cycle involves several stages that are executed sequentially over multiple clock pulses. The process begins with fetching the next instruction from memory, which is stored in a special computer memory. This instruction is then decoded by the CPU's instruction set. After decoding, the CPU executes the instruction, which may involve fetching the next instruction from memory. The entire process repeats, with the next instruction cycle fetching the next instruction.
+
+Sources Used:
+
+• Central_processing_unit_NEW.pdf
+
+Detailed Source Information
+
+Inference time: 12.58 seconds
+
+Throughput: 8.82 tokens/second
+
+Context Length: 361 tokens
+
+Memory Usage: 0.43GB
+
+
+
+-----------------------------------------------------------------------------
+
+Describe the components of the CPU and their roles.
+
+User: Describe the components of the CPU and their roles.
+
+AI: The CPU is composed of several key components, including the Arithmetic Logic Unit (ALU), which performs arithmetic and logic operations. The ALU is responsible for the operations of addition, subtraction, multiplication, and division. It also manages the data that will be used for these operations. The ALU is connected to the Processor Registers (PR) which store the results of ALU operations. The Control Unit (CU) orchestrates the fetching, decoding and execution of instructions. It directs the ALU to perform the calculations and instructions that will be executed by the CPU.
+
+Sources Used:
+
+• Central_processing_unit_NEW.pdf
+
+• Computer_hardware_NEW.pdf
+
+Detailed Source Information
+
+Inference time: 13.34 seconds
+
+Throughput: 8.72 tokens/second
+
+Context Length: 389 tokens
+
+Memory Usage: 0.43GB
+
+User: Describe the components of the CPU and their roles.
+
+AI: The CPU is composed of several key components, each serving a distinct function. The arithmetic logic unit (ALU) performs calculations and logic operations, while processor registers store operands and the results of ALU operations. The control unit manages the fetching, decoding, and execution of instructions, directing the ALU to perform the necessary operations. The motherboard is where the CPU, ALU, and other components are integrated and housed. The motherboard is typically made up of several components such as memory, power supply, and expansion cards. The CPU's performance is further enhanced by its microprocessor, which is fabricated on a metal substrate. The ALU, registers, and control unit all play crucial roles in the core operation of the CPU, allowing it to execute instructions and perform calculations.
+
+Sources Used:
+
+• Central_processing_unit_NEW.pdf
+
+• Computer_hardware_NEW.pdf
+
+Detailed Source Information
+
+Inference time: 18.12 seconds
+
+Throughput: 8.67 tokens/second
+
+Context Length: 389 tokens
+
+Memory Usage: 0.43GB
+
+User: Describe the components of the CPU and their roles.
+
+AI: The CPU consists of the Arithmetic Logic Unit (ALU), processor registers, and a Control Unit. The ALU performs arithmetic and logical operations. The processor registers store the results of ALU operations. The Control Unit orchestrates the fetching of program instructions from memory, decoding them, and executing them. The Control Unit also handles the instructions, decodes them, and returns results for further processing by other components. Modern CPUs are specialized to handle the majority of computational tasks required for a computer to operate.
+
+Sources Used:
+
+• Central_processing_unit_NEW.pdf
+
+• Computer_hardware_NEW.pdf
+
+Detailed Source Information
+
+Inference time: 13.65 seconds
+
+Throughput: 8.76 tokens/second
+
+Context Length: 389 tokens
+
+Memory Usage: 0.43GB
+
+---------------------------------------------------------------------------
+
+What is the difference between RISC and CISC architectures?
+
+User: What is the difference between RISC and CISC architectures?
+
+AI: Both RISC (Reduced Instruction Set Computer) and CISC (Complex Instruction Set Computer) are types of computer architectures that differ in their instruction set and the number of instructions the machines need to execute. The main difference lies in the complexity of the instruction set. RISC reduces the number of instructions needed to be executed, while CISC uses a larger set of instructions, which makes them more efficient. CISC architectures are often used in systems that require a large number of instructions to be executed, such as mobile phones and tablets. RISC architectures are typically used in systems that do not require many instructions to be executed, such as microcontrollers, where the number of instructions is not as important.
+
+Sources Used:
+
+• Central_processing_unit_NEW.pdf
+
+• Computer_hardware_NEW.pdf
+
+Detailed Source Information
+
+Inference time: 16.58 seconds
+
+Throughput: 8.65 tokens/second
+
+Context Length: 405 tokens
+
+Memory Usage: 0.43GB
+
+User: What is the difference between RISC and CISC architectures?
+
+AI: RISC (reduced instruction set computer) and CISC (complex instruction set computer) are two distinct types of computers. RISC architectures use a smaller, more efficient instruction set to minimize the number of instructions needed to execute a program. This allows for faster computation and better performance. In contrast, CISC (complex instruction set computer) uses a larger, more complex set of instructions to perform more operations in a single instruction cycle. This results in slower computation and lower performance.
+
+Sources Used:
+
+• Central_processing_unit_NEW.pdf
+
+• Computer_hardware_NEW.pdf
+
+Detailed Source Information
+
+Inference time: 11.42 seconds
+
+Throughput: 8.69 tokens/second
+
+Context Length: 405 tokens
+
+Memory Usage: 0.43GB
+
+User: What is the difference between RISC and CISC architectures?
+
+AI: The main difference between RISC and CISC architectures lies in their approach to minimizing the number of instructions machines need to use. RISC architectures, such as those used in modern computing systems, utilize a larger expression set to minimize the number of instructions needed, which is beneficial for reducing power consumption and optimizing performance. In contrast, CISC architectures, like those found in older systems, are designed to use fewer instructions, which can lead to increased complexity and potential for issues such as data corruption.
+
+Sources Used:
+
+• Central_processing_unit_NEW.pdf
+
+• Computer_hardware_NEW.pdf
+
+Detailed Source Information
+
+Inference time: 13.40 seconds
+
+Throughput: 8.72 tokens/second
+
+Context Length: 405 tokens
+
+Memory Usage: 0.43GB
+
